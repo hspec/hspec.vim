@@ -10,13 +10,11 @@ endif
 runtime! syntax/haskell.vim
 
 " almost the same as hsString from vim73/syntax/haskell.vim
-syntax region hspecString start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=hsSpecialChar contained
+syntax region hspecDescription start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=hsSpecialChar contained
 
-syntax keyword hspecGroup describe context  nextgroup=hspecString skipwhite skipnl skipempty
-syntax keyword hspecItem  it prop           nextgroup=hspecString skipwhite skipnl skipempty
+syntax keyword hspecDescribe describe context  nextgroup=hspecDescription skipwhite skipnl skipempty
+syntax keyword hspecIt  it prop           nextgroup=hspecDescription skipwhite skipnl skipempty
 
-highlight def link hspecGroup Type
-highlight def link hspecItem Identifier
-highlight def link hspecString Comment
+highlight def link hspecDescription hsString
 
 let b:current_syntax = "hspec"
