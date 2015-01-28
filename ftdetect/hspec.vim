@@ -1,1 +1,1 @@
-autocmd BufReadPost,BufNewFile *Spec.hs set filetype=hspec
+autocmd BufReadPost,BufNewFile *Spec.hs set filetype=haskell.hspec
