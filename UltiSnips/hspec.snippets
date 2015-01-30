@@ -10,23 +10,24 @@ extends haskell
 
 # See: http://hspec.github.io/hspec-discover.html
 snippet hdisc "Hspec: discovery magic preproc comment" b
-{-# OPTIONS_GHC -F -pgmF hspec-discover #-}
+{-# OPTIONS_GHC -F -pgmF hspec-discover${1: -optF --module-name=${2:Spec}} #-}
 endsnippet
 
 
 # This can be used as a standalone main suite, or a single file when using
 # discovery. The main method then allows it to be individually tested from GHCi.
 snippet spec "Hspec: new suite" b
-module ${1:Subject.MySpec} (main, spec) where
+module ${1:Module.Subject}Spec (main, spec) where
 
 import Test.Hspec
+import $1
 
 main :: IO ()
 main = hspec spec
 
 spec :: Spec
 spec = do
-	describe "${2:subject}" $ do
+	describe "${2:$1}" $ do
 		$0
 endsnippet
 
