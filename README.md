@@ -40,3 +40,7 @@ common triggers: `spec`, `des`, `con`, `it`, etc.
 [Hspec]: http://hspec.github.io/
 [UltiSnips]: https://github.com/SirVer/ultisnips
 
+### License
+
+Distributed under the [MIT license](http://www.opensource.org/licenses/MIT).
+
