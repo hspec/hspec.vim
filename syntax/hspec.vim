@@ -3,7 +3,7 @@
 " Maintainer:   Simon Hengel <sol@typeful.net>
 " Last Change:  2013 May 18
 
-if exists("b:current_syntax")
+if exists("b:current_syntax") && b:current_syntax == "hspec"
   finish
 endif
 
