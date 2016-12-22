@@ -5,5 +5,5 @@ if !exists("g:hspec_disable_maps")
 endif
 
 if exists("g:hspec_disable_maps") && g:hspec_disable_maps == 0
-    nnoremap gH :HspecOpenTest<CR>
+    nnoremap ghs :HspecOpenTest<CR>
 endif
