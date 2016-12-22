@@ -6,6 +6,8 @@ Haskell.
 
 ### Installation
 
+Compatible with *Vundle*, *Pathogen*, *Vim-plug*.
+
 If you are using [pathogen.vim](https://github.com/tpope/vim-pathogen), then
 you can install `hspec.vim` with:
 
