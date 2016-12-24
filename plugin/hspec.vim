@@ -5,5 +5,8 @@ if !exists("g:hspec_disable_maps")
 endif
 
 if exists("g:hspec_disable_maps") && g:hspec_disable_maps == 0
-    nnoremap ghs :HspecOpenTest<CR>
+    augroup hspec
+        au!
+        au FileType haskell nnoremap ghs :HspecOpenTest<CR>
+    augroup END
 endif
