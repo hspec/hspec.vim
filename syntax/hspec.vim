@@ -12,8 +12,8 @@ runtime! syntax/haskell.vim
 " almost the same as hsString from vim73/syntax/haskell.vim
 syntax region hspecDescription start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=hsSpecialChar contained
 
-syntax keyword hspecDescribe describe context  nextgroup=hspecDescription skipwhite skipnl skipempty
-syntax keyword hspecIt  it prop           nextgroup=hspecDescription skipwhite skipnl skipempty
+syntax keyword hspecDescribe describe fdescribe xdescribe context nextgroup=hspecDescription skipwhite skipnl skipempty
+syntax keyword hspecIt it fit xit prop nextgroup=hspecDescription skipwhite skipnl skipempty
 
 highlight def link hspecDescription hsString
 
